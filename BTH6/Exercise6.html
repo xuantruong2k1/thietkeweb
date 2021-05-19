@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 6</title>
+    <link rel="stylesheet" href="css/bai6.css">
+</head>
+
+<body>
+    <div class="id">
+        <h2>CHI TIẾT SẢN PHẨM</h2>
+    </div>
+    <div class="sanpham">
+        <div class="sanpham1">
+            <div class="sanpham1_1">
+                <div class="aoto">
+                    <img src="img/aoden.jfif" alt="" id="aoto">
+                </div>
+            </div>
+            <div class="sanpham1_2">
+                <div class="ao">
+                    <img src="img/aoden.jfif" alt="" class="aonho">
+                </div>
+                <div class="ao">
+                    <img src="img/aodo.jfif" alt="" class="aonho">
+                </div>
+                <div class="ao">
+                    <img src="img/aovang.jfif" alt="" class="aonho">
+                </div>
+            </div>
+        </div>
+        <div class="sanpham2">
+            <b>Áo Sơ Mi Nam Dài Tay Phong Cách Thời Trang Siêu Cao Cấp</b>
+            <p>Giá: <span>350.000đ</span></p>
+            <p class="chu">Chọn màu:</p>
+            <button id="btn1">
+                Đen
+            </button>
+            <button id="btn2">
+                Đỏ
+            </button>
+            <button id="btn3">
+                Vàng
+            </button>
+            <p class="chu">Chọn Size:</p>
+            <div class="size">
+                <button id="btn4" onclick="changebackground()">L</button>
+                <button id="btn5" onclick="changebackground1()">M</button>
+                <button id="btn6" onclick="changebackground2()">XL</button>
+                <button id="btn7" onclick="changebackground3()">XXL</button>
+            </div>
+            <p class="chu">Số Lượng:</p>
+            <input type="number" value="1">
+            <button class="dat">Chọn Mua</button>
+        </div>
+    </div>
+
+    <script>
+        var button1 = document.getElementById("btn1");
+        var button2 = document.getElementById("btn2");
+        var button3 = document.getElementById("btn3");
+        var aoto = document.getElementById("aoto")
+        var ao = document.getElementsByClassName("aonho")
+
+        ao[0].onclick = function() {
+            aoto.src = ao[0].src
+        }
+        ao[1].onclick = function() {
+            aoto.src = ao[1].src
+        }
+        ao[2].onclick = function() {
+            aoto.src = ao[2].src
+        }
+
+        button1.onclick = function() {
+            aoto.src = ao[0].src
+        }
+        button2.onclick = function() {
+            aoto.src = ao[1].src
+        }
+        button3.onclick = function() {
+            aoto.src = ao[2].src
+        }
+    </script>
+    <script>
+        function changebackground() {
+            var result = document.getElementById("btn4");
+            result.style.background = "rgb(60, 60, 231)";
+        }
+
+        function changebackground1() {
+            var result = document.getElementById("btn5");
+            result.style.background = "rgb(60, 60, 231)";
+        }
+
+        function changebackground2() {
+            var result = document.getElementById("btn6");
+            result.style.background = "rgb(60, 60, 231)";
+        }
+
+        function changebackground3() {
+            var result = document.getElementById("btn7");
+            result.style.background = "rgb(60, 60, 231)";
+        }
+    </script>
+</body>
+
+</html>
