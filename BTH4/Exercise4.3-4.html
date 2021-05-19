@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 4.34</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        padding: 0;
+        margin: 0;
+        
+    }
+    .main{
+        width: 80%;
+        margin: auto;
+        
+    }
+    .flex{
+        display: flex;
+        justify-content: space-between;
+    }
+    p,h3{
+        margin: 5px;
+    }
+    .ad{
+        position: sticky;
+        width: 9%;
+        height: 700px;
+    }
+    .menu{
+        width: 100%;
+        height: 40px;
+        background-color:rgb(17, 17, 112);
+        color: white;
+        display: flex;
+
+        padding: 10px 70px 0; 
+        box-sizing: border-box;
+        border-radius: 5px;
+
+    }
+    .menu a{
+        color:white;
+        text-decoration: none;
+        margin-right: 40px;
+    }
+
+    .anh{
+        height: 320px;
+        width: 100%;
+        margin: 10px 0;
+    }
+    .anh img{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    .none{
+        display: none;
+    }
+    .product li{
+        list-style: none;
+        background-color: blue;
+        width: 100px;
+        height: 40px;
+        padding: 10px;
+    }
+   
+    .product li:hover{
+        background-color: blueviolet;
+    }
+    .menu a:hover{
+        text-decoration: underline;
+        color: white;
+    }
+    .product:hover ul {
+        padding: 0;
+        display: block;
+        position: relative;
+        top: -5px;
+        left: -10px;
+    }
+    .detail{
+        justify-content: space-between;
+        line-height: 1.2;
+    }
+    .detail section{
+        flex-basis: 32%;
+        height: 350px;
+        overflow: hidden;
+        border: 3px solid gray;
+        border-radius: 5px;
+    }
+    .detail section p:first-child{
+        margin: 0;
+        padding: 10px 5px;
+        font-size: 20px;
+        background-color: rgb(228, 224, 224);
+        color: rgb(9, 9, 129) ;
+    }
+    .detail img{
+        float: left;
+        height: 80px;
+        width: 80px;
+        margin: 0 20px 5px;
+    }
+    .detail h3{
+        color:blue;
+    }
+
+</style>
+<body>
+    <div class="flex">
+        <div class ="main">
+            <section class="menu">
+                <a href="">Trang chủ</a>
+                <a href="">Giới thiệu</a>
+                <a href="">Tin tức</a>
+                <div class="product">
+                    <a href="">Sản phẩm</a>
+                    <ul class="none">
+                        <li><a href="">Laptop</a></li>
+                        <li><a href="">Linh kiên</a></li>
+                    </ul>
+                </div>
+                <a href="">Giải pháp</a>
+                <a href="">Khách hàng</a>
+                <a href="">Tuyển dụng</a>
+                <a href="">Liên hệ</a>
+            </section>
+            <section class="anh">
+                <img src="picture/1.png" >
+            </section>
+            <section class="detail flex">
+                <section>
+                    <p>Sản phẩm</p>
+                    <div >
+                        <img src="picture/2.png">
+                        <h3>Phần mềm chấm thi trắc nghiệm TestPro Engine</h3>
+                        <p>Đăng ngày: 01/06/2012 07:42AM</p>
+                        <p>Với mục tiêu luôn đi đầu về giải phấp thi trắc nghiệm,phòng phát triển  và gia công phần mềm thuộc Trung tâm Hưng Yên Aptech:CNTT&TT-Trường Đại Học Sư phạm kĩ thuật Hưng Yên
+                        </p>
+                        <ul>
+                            <li><a href="">Tiêu đề tin liên quan 1</a></li>
+                            <li><a href="">Tiêu đề tin liên quan 2</a></li>
+                            <li><a href="">Tiêu đề tin liên quan 3</a></li>
+                            <li><a href="">Tiêu đề tin liên quan 4</a></li>
+                            <li><a href="">Tiêu đề tin liên quan 5</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <p>Giải pháp</p>
+                    <div>
+                        <img src="picture/3.png" >
+                        <h3>Giải pháp hội thảo trực tuyến</h3>
+                        <p>Đăng ngày: 01/06/2012 07:42AM</p>
+                        <p>Sau nhiều năm nghiên cứu,phát triển ứng dụng Họp trực tuyến ,chúng tôi đã chính thức tung ra thị trường sản phẩm Navi ViDeo Conference Vesion3.0 từ cuối năm 2011
+                        </p>
+                        <ul>
+                            <li><a href="">Tiêu đề tin liên quan 1</a></li>
+                            <li><a href="">Tiêu đề tin liên quan 2</a></li>
+                            <li><a href="">Tiêu đề tin liên quan 3</a></li>
+                            <li><a href="">Tiêu đề tin liên quan 4</a></li>
+                            <li><a href="">Tiêu đề tin liên quan 5</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <p>Tin tức</p>
+                    <div>
+                        <img src="picture/4.png" >
+                        <h3>Microsoft công bố Windows 8 Relase Preview</h3>
+                        <p>Đăng ngày: 01/06/2012 07:42AM</p>
+                        <p>Rạng sáng nay(1/6) theo giờ thức công bố phiên bản windows 8 Release Preview với nhiều tính năng và ứng dụng mới được thêm vào
+                        </p>
+                        <ul>
+                            <li><a href="">Tiêu đề tin liên quan 1</a></li>
+                            <li><a href="">Tiêu đề tin liên quan 2</a></li>
+                            <li><a href="">Tiêu đề tin liên quan 3</a></li>
+                            <li><a href="">Tiêu đề tin liên quan 4</a></li>
+                            <li><a href="">Tiêu đề tin liên quan 5</a></li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
