@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        span{
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <span id="date"></span>
+    <script>
+        gettime();
+        function gettime(){
+            let d='';
+            switch(new Date().getDay())
+            {
+                case 0:
+                    d="chủ nhật";
+                    break;
+                case 1:
+                    d="thứ hai";
+                    break;
+                case 2:
+                    d="thứ ba";
+                    break;
+                case 3:
+                    d="thứ tư";
+                    break;
+                case 4:
+                    d="thứ năm";
+                    break;
+                case 5:
+                    d="thứ sáu";
+                    break;
+                case 6:
+                    d="thứ bảy";
+                    break;
+            }
+            
+            d +=`, ` + new Date().getDate() + `/` + new Date().getMonth() + `/` + new Date().getFullYear()
+            +`,  `+ new Date().getHours() + `:` + new Date().getMinutes() + `:` +new Date().getSeconds();
+            document.getElementById("date").innerHTML = d;
+            setTimeout(gettime,1000);
+        }
+    </script>
+</body>
+</html>

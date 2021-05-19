@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5.3</title>
+    <style>
+    .container {
+        max-width: 500px;
+    }
+    .main__heading{
+        text-align: center;
+        max-width: 500px;
+        background-color: rgb(213, 186, 238);
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .main{
+        justify-content: center;
+    }
+    .main__row{
+        margin-left: 20%;
+        align-items: center;
+        display: flex;
+        margin-bottom: 10px;
+    }
+    .main__label{
+        width: 100px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="main">
+            <div class="main__heading">
+                <P>đăng ký khoá học lập trình web với asp.net</P>
+            </div>
+            <div class="main__content">
+                <div class="main__row">
+                    <div class="main__label">
+                        Họ và tên:
+                    </div>
+                    <div class="main__input">
+                        <input type="text" class="fullName">
+                        <span>*</span>
+                    </div>
+                </div>
+                <div class="main__row">
+                    <div class="main__label">
+                        Giới tính:
+                    </div>
+                    <div class="main__input">
+                        <input type="radio" name="gioitinh" id="male">
+                        <label for="nam">Nam</label>
+                        <input type="radio" name="gioitinh" id="female">
+                        <label for="nu">Nữ</label>
+                    </div>
+                </div>
+                <div class="main__row">
+                    <div class="main__label">
+                        Ngày sinh:
+                    </div>
+                    <div class="main__input">
+                        <input type="text" class="dayOfBirth">
+                        <span>*</span>
+                    </div>
+                </div>
+                <div class="main__row">
+                    <div class="main__label">
+                        Địa chỉ:
+                    </div>
+                    <div class="main__input">
+                        <input type="text" class="address">
+                        <span>*</span>
+                    </div>
+                </div>
+                <div class="main__row">
+                    <div class="main__label">
+                        Số điện thoại:
+                    </div>
+                    <div class="main__input">
+                        <input type="text" class="phone">
+                        <span>*</span>
+                    </div>
+                </div>
+                <div class="main__row">
+                    <div class="main__label">
+                        Email:
+                    </div>
+                    <div class="main__input">
+                        <input type="text" class="mail">
+                        <span>*</span>
+                    </div>
+                </div>
+                <div class="main__row">
+                    <div class="main__label">
+                        Mã xác nhận:
+                    </div>
+                    <div class="main__input">
+                        <input type="text" class="verifi">
+                        <span>*</span>
+                    </div>
+                </div>
+                <div class="main__row main__btn">
+                    <button class="btn_regist">
+                        Đăng ký
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script ]>
+        const fullName = document.querySelector('.fullName');
+        const address = document.querySelector('.address');
+        const phone = document.querySelector('.phone');
+        fullName.addEventListener('blur', () => {
+            var patt = /[0-9]/g;
+            var warning = fullName.nextElementSibling;
+            if (fullName.value == '') {
+                warning.title = 'Không được để trống';
+            } else {
+                warning.title = '';
+            }
+            if (fullName.value.length > 50 || fullName.value.match(patt) != null) {
+                warning.title = 'Không được quá 50 ký tự hoặc chứa ký tự số';
+            } else {
+                warning.title = '';
+            }
+        });
+
+        address.addEventListener('blur', () => {
+            var warning = address.nextElementSibling;
+            if (address.value.length > 40) {
+                warning.title = 'Không được quá 40 ký tự';
+            } else {
+                warning.title = '';
+            }
+        });
+
+        phone.addEventListener('blur', () => {
+            var patt = /[^\d]/g;
+            var warning = phone.nextElementSibling;
+            if (phone.value.match(patt) != null) {
+                warning.title = 'Chỉ được chứa ký tự số';
+            } else {
+                warning.title = '';
+            }
+        });
+
+    </script>
+</body>
+</html>
